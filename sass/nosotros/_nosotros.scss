@@ -1,0 +1,32 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.nosotros{
+    margin-top: 40px;
+    .nosotros__heading{
+        text-align: center;
+        margin-bottom: 20px
+    }
+
+    .nosotros__grid{
+        @include m.grid(3,1);
+        gap: 20px;
+        background-image: url("../../img/separador_alternativo.png");
+        background-repeat: no-repeat;
+        background-position: top center;
+        @include m.telefono{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nosotros__bloque{
+            display: grid;
+            place-items: center;
+            margin-top: 60px;
+
+            .nosotros__bloque-texto{
+                text-align: center;
+            }
+        }
+    }
+}

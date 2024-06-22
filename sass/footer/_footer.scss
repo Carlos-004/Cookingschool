@@ -1,0 +1,19 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.footer{
+    .footer__grid {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include m.telefono{
+            flex-direction: column;
+        }
+
+        .navegacion,
+        .footer__copyright{
+            font-size: 20px;
+        }
+    }
+}

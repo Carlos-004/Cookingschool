@@ -1,0 +1,28 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+
+.escuela{
+    background-image: url("../../img/chef_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .escuela__heading{
+        color: v.$blanco;
+        font-weight: bold;
+    }
+    .escuela__texto{
+        color: v.$blanco;
+        font-size: 24px;
+        text-align: center;
+    }
+    .escuela__enlace{
+        @include m.boton(v.$primario,v.$blanco)
+    }
+}

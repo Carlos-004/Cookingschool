@@ -1,0 +1,66 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.bloques{
+    .bloques__grid{
+        @include m.grid(2,1);
+
+        @include m.telefono{
+            display: flex;
+            flex-direction: column;
+        }
+        .bloque{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .bloque__contenido{
+                border-bottom: solid 1px v.$blanco;
+                border-top:solid 1px v.$blanco ;
+                padding: 20px 0;
+                width: 40%;
+                @include m.telefono{
+                    width: 100%;
+                }
+
+                .bloque__heading,
+                .bloque__texto{
+                    text-align: center;
+                    color: v.$blanco;
+                }
+                .bloque__texto{
+                    font-size: 18px;
+                }
+
+            }
+        }
+        .bloque__experiencia{
+            background-color: v.$primario;
+            @include m.telefono{
+                padding: 10px;
+            }
+        }
+        .bloque__nosotros{
+            grid-column: 2/3;
+            grid-row: 2/3;
+            background-color: v.$secundario;
+            @include m.telefono{
+                padding: 10px;
+            }
+        }
+        .bloque__one{
+            background-image: url("../../img/bloque_1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 350px;
+        }
+        .bloque__dos{
+            background-image: url("../../img/bloque_2.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 350px;
+        }
+
+    }
+}

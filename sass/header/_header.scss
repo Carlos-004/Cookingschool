@@ -1,0 +1,23 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+
+.header{
+    margin: 40px 0;
+    .header__barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include m.telefono{
+            flex-direction: column;
+            justify-content: unset;
+        }
+
+        .logo{
+            .logo__img{
+                width: 200px;
+            }
+        }
+    }
+}
